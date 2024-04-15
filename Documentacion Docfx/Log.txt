@@ -1,0 +1,29 @@
+JsonReaderException: Unexpected character encountered while parsing value: #. 
+Path '', line 0, position 0.
+  at bool ParseValue()                                                          
+  at bool Read()                                                                
+  at bool ReadAndMoveToContent()                                                
+  at bool ReadForType(JsonContract contract, bool hasConverter)                 
+  at object Deserialize(JsonReader reader, Type objectType, bool                
+     checkAdditionalContent)                                                    
+  at object DeserializeInternal(JsonReader reader, Type objectType)             
+  at object Deserialize(JsonReader reader, Type objectType)                     
+  at T Deserialize<T>(JsonReader reader)                                        
+  at T Deserialize<T>(TextReader reader, JsonSerializer serializer) in          
+     JsonUtility.cs:54                                                          
+  at T Deserialize<T>(string path, JsonSerializer serializer) in JsonUtility.cs:
+     49                                                                         
+  at (DocfxConfig , string configDirectory) GetConfig(string configFile) in     
+     Docset.cs:75                                                               
+  at void <Execute>b__0() in DefaultCommand.cs:39                               
+  at int Run(LogOptions options, Action run) in CommandHelper.cs:48             
+  at int Execute(CommandContext context, Options options) in DefaultCommand.cs: 
+     31                                                                         
+  at Task<int> Execute(CommandContext context, CommandSettings settings) in     
+     CommandOfT.cs:40                                                           
+  at Task<int> Execute(CommandTree leaf, CommandTree tree, CommandContext       
+     context, ITypeResolver resolver, IConfiguration configuration) in          
+     CommandExecutor.cs:144                                                     
+  at async Task<int> Execute(IConfiguration configuration, IEnumerable<string>  
+     args) in CommandExecutor.cs:83                                             
+  at async Task<int> RunAsync(IEnumerable<string> args) in CommandApp.cs:84     
